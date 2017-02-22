@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--装配 CompactDisc -->
+    <bean id="dangNianQing" class="com.bean.xml.DangNianQing"/>
+
+
+    <!--装配com.bean.xml.CDPlay 类 但是CDPlay中需要有一个CompactDisc-->
+    <bean id="cdPlay" class="com.bean.xml.CDPlay">
+        <!-- 通过引用id名 自动装配 CompactDisc -->
+        <!-- <constructor-arg ref="dangNianQing"/>-->
+        <!--<constructor-arg ref="randomCd"/>-->
+        <property name="compactDisc" ref="randomCd" />
+    </bean>
+
+
+    <bean id="randomCd" class="com.bean.xml.RandomCd">
+        <constructor-arg index="0" value="当年情"/>
+        <constructor-arg index="1" value="张国荣"/>
+    </bean>
+</beans>
