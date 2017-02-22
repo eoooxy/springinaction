@@ -1,6 +1,8 @@
 package com.bean.profile;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,21 +16,22 @@ import org.springframework.context.annotation.Configuration;
 public class PetMountsConfig {
 
 
-
-
+    @Bean
+    @Profile("sky")
     public PetMounts sky() {
-
         return new FlyingMounts();
     }
 
+    @Bean
+    @Profile("land")
     public PetMounts land() {
-
-        return new FlyingMounts();
+        return new LandMounts();
     }
 
+    @Bean
+    @Profile("sea")
     public PetMounts sea() {
-
-        return new FlyingMounts();
+        return new SeaMounts();
     }
 
 

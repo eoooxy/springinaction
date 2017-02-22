@@ -4,4 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <beans profile="sky">
+        <bean id="flyingMounts" class="com.bean.profile.FlyingMounts"/>
+    </beans>
+
+    <beans profile="land">
+        <bean id="landMounts" class="com.bean.profile.LandMounts"/>
+    </beans>
+
+    <beans profile="sea">
+        <bean id="seaMounts" class="com.bean.profile.SeaMounts"/>
+    </beans>
+
+
 </beans>
