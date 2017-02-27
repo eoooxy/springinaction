@@ -2,6 +2,12 @@
  study notes for spring in action
 
 ___
+ 2017年2月27日 16:54:53
+
+ 面向切片的Spring以及如何使用注解创建切面
+
+ 实例：test/com/aop/test1
+___
  2017年2月23日 10:40:26
 
  条件化Bean配置的方法
