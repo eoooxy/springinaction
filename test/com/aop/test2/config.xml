@@ -34,10 +34,10 @@
          </aop:aspect>
      </aop:config>
 
-    <aop:config>
+ <!--   <aop:config>
         <aop:aspect ref="vocalConcert">
             <aop:pointcut id="song" expression="execution(* com.aop.test2.Song.song(String) )and args(song)" />
         </aop:aspect>
-    </aop:config>
+    </aop:config>-->
 
 </beans>
