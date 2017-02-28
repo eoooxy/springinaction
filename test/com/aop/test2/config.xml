@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="vocalConcert" class="com.aop.test2.VocalConcert"></bean>
+
+    <bean class="com.aop.test2.ManMan" id="manMan"/>
+
+    <aop:config>
+        <aop:aspect ref="vocalConcert">
+            <aop:before pointcut="execution(* com.aop.test2.Song.song(..))" method="checking"/>
+            <aop:after pointcut="execution(* com.aop.test2.Song.song(..))" method="beautiful"/>
+            <aop:after-returning pointcut="execution(* com.aop.test2.Song.song(..))" method="leave"/>
+
+            <!-- <aop:pointcut id="song" expression="execution(* com.aop.test2.Song.song(..))"/>
+             <aop:before pointcut-ref="song" method="checking"/>
+             <aop:after pointcut-ref="song" method="beautiful"/>
+             <aop:after-returning pointcut-ref="song" method="leave"/>-->
+        </aop:aspect>
+    </aop:config>
+
+     <aop:config>
+         <aop:aspect ref="vocalConcert">
+             <aop:pointcut id="song" expression="execution(* com.aop.test2.Song.song(..))"/>
+             <aop:around method="watchVocalConcert" pointcut-ref="song"/>
+         </aop:aspect>
+     </aop:config>
+
+</beans>
