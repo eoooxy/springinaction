@@ -11,6 +11,6 @@
     <title>Spring</title>
 </head>
 <body>
-    <h1>Welcome to Spring</h1>
+<h1>Welcome to Spring</h1>
 </body>
 </html>

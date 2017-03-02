@@ -1,6 +1,13 @@
 # springinaction
  study notes for spring in action
 
+
+___
+ 2017年3月2日 16:25:02
+
+ Spring mvc 注解类配置方法
+
+ 实例：man/java/com/springmvc 下
 ___
  2017年2月28日 22:22:33
 
