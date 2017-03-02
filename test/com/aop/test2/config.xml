@@ -4,16 +4,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="vocalConcert" class="com.aop.test2.VocalConcert"></bean>
+    <bean id="vocalConcert" class="com.aop.test2.VocalConcert" />
 
     <bean class="com.aop.test2.ManMan" id="manMan"/>
 
+    <!--一般的前后通知消息 -->
     <aop:config>
         <aop:aspect ref="vocalConcert">
+            <!-- vocalConcert 实现类调用之前，实现的方法 -->
             <aop:before pointcut="execution(* com.aop.test2.Song.song(..))" method="checking"/>
+            <!-- vocalConcert 实现类调用之后，实现的方法 -->
             <aop:after pointcut="execution(* com.aop.test2.Song.song(..))" method="beautiful"/>
+            <!-- vocalConcert 实现类调用结束，返回的时候，实现的方法 -->
             <aop:after-returning pointcut="execution(* com.aop.test2.Song.song(..))" method="leave"/>
 
+            <!-- 同一个切片，定一个id 调用的方法-->
             <!-- <aop:pointcut id="song" expression="execution(* com.aop.test2.Song.song(..))"/>
              <aop:before pointcut-ref="song" method="checking"/>
              <aop:after pointcut-ref="song" method="beautiful"/>
@@ -21,11 +26,18 @@
         </aop:aspect>
     </aop:config>
 
+    <!--环绕通知 -->
      <aop:config>
          <aop:aspect ref="vocalConcert">
              <aop:pointcut id="song" expression="execution(* com.aop.test2.Song.song(..))"/>
              <aop:around method="watchVocalConcert" pointcut-ref="song"/>
          </aop:aspect>
      </aop:config>
+
+ <!--   <aop:config>
+        <aop:aspect ref="vocalConcert">
+            <aop:pointcut id="song" expression="execution(* com.aop.test2.Song.song(String) )and args(song)" />
+        </aop:aspect>
+    </aop:config>-->
 
 </beans>

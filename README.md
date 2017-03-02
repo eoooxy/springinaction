@@ -2,6 +2,12 @@
  study notes for spring in action
 
 ___
+ 2017年2月28日 22:22:33
+
+ Spring aop xml注解方法
+
+ 实例：test/com/aop/test2
+___
  2017年2月27日 16:54:53
 
  面向切片的Spring以及如何使用注解创建切面
