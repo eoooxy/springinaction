@@ -9,6 +9,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * Time  14:19
  */
 
+/*
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -29,3 +30,4 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
         return new String[]{"/"};
     }
 }
+*/

@@ -15,6 +15,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  * Data  2017/03/01
  * Time  14:20
  */
+/*
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.springmvc.web")
@@ -22,7 +23,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        //super.configureDefaultServletHandling(configurer);
         configurer.enable();
     }
 
@@ -32,9 +32,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/view/");
         resolver.setSuffix(".jsp");
-        resolver.setExposeContextBeansAsAttributes(true);
+        //resolver.setExposeContextBeansAsAttributes(true);
         return resolver;
     }
 
 
 }
+*/

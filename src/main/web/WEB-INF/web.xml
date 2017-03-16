@@ -28,4 +28,23 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>servletTest</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>servletTest</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>fileterTest</filter-name>
+        <filter-class>com.springmvc.filter.TestFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>fileterTest</filter-name>
+        <url-pattern>/back/*</url-pattern>
+    </filter-mapping>
 </web-app>
