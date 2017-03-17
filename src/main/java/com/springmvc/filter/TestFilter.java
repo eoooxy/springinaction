@@ -17,10 +17,14 @@ public class TestFilter implements Filter {
 
     public void init(FilterConfig filterConfig) throws ServletException {
 
+        System.out.println("Filter _ init");
+
     }
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) servletRequest;
+
+        System.out.println("Filter _ doFilter before");
+      /*  HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
         HttpSession session = req.getSession();
         //获取请求路径
@@ -39,10 +43,12 @@ public class TestFilter implements Filter {
             } else {
                 filterChain.doFilter(req, resp);
             }
-        }
+        }*/
+        filterChain.doFilter(servletRequest, servletResponse);
+        System.out.println("Filter _ doFilter after");
     }
 
     public void destroy() {
-
+        System.out.println("Filter _ destroy");
     }
 }

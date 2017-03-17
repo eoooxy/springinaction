@@ -8,11 +8,20 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    
+
     <context:component-scan base-package="com.springmvc.web"/>
 
     <!-- 启用spring mvc 注解 -->
     <context:annotation-config/>
+
+    <mvc:interceptors>
+        <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+        <!--<bean class="com.xxxx.xxx.xxx"/>-->
+        <mvc:interceptor>
+            <mvc:mapping path="/index.do"/>
+            <bean class="com.springmvc.interceptor.TestInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
     <!-- 开启注解 -->
     <mvc:annotation-driven/>

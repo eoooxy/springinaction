@@ -13,10 +13,12 @@ import javax.servlet.ServletException;
  * Time  16:42
  */
 
+/*
 public class MyFilterConfig implements WebApplicationInitializer {
     public void onStartup(ServletContext servletContext) throws ServletException {
 
         Dynamic myFilter = servletContext.addFilter("myFilter", com.springmvc.filter.TestFilter.class);
-        myFilter.addMappingForUrlPatterns(null, false, "/back/*");
+        myFilter.addMappingForUrlPatterns(null, false, "/back/");
     }
 }
+*/
