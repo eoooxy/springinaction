@@ -1,11 +1,5 @@
 package com.springmvc.config;
 
-import org.springframework.web.WebApplicationInitializer;
-
-import javax.servlet.FilterRegistration.Dynamic;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-
 /**
  * Created by IntelliJ IDEA.
  * Author XueYuan

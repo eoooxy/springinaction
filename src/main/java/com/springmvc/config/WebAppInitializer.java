@@ -1,7 +1,5 @@
 package com.springmvc.config;
 
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 /**
  * Created by IntelliJ IDEA.
  * Author XueYuan
